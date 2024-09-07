@@ -1,14 +1,32 @@
 "use client";
-import { Container, Text, Title } from "@mantine/core";
+import { Container, Title } from "@mantine/core";
+
+import AddReview from "@components/AddReview"
+import Review from "@components/Review"
+import Pagnigation from '@components/Pagnigation'
+import Footer from "@components/Footer";
+
+import { Reviews } from "@lib/reviews";
 
 export default function Home() {
   return (
     <Container size="600px">
+      
       <Title order={2}>Food Review 🍕</Title>
 
-      <Text ta="center" my="sm">
-        Copyright © 2024 Chayanin Suatap 650610560
-      </Text>
+      <AddReview/>
+
+      {Reviews.map((review) => (
+        <Review 
+          key = {review.id}
+          {...review}
+        />
+      ))}
+
+      <Pagnigation/>
+
+      <Footer year="2024" name="Chayanat Hongnueng" studentId="660612141"/>
+
     </Container>
   );
 }
