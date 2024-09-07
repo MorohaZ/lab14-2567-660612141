@@ -1,12 +1,12 @@
 "use client";
 import { Container, Title } from "@mantine/core";
 
-import AddReview from "@components/AddReview"
+import AddReview from "@components/AddR"
 import Review from "@components/Review"
 import Pagnigation from '@components/Pagnigation'
 import Footer from "@components/Footer";
 
-import { Reviews } from "@lib/reviews";
+import { Reviews } from "@lib/review";
 
 export default function Home() {
   return (
